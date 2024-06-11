@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelle</title>
+</head>
+<body>
+    <h1>Tabelle</h1>
+
+    <hr>
+
+    <h2>Tabella semplice</h2>
+    <table style="border-collapse: collapse; border: 1px solid black">
+        <caption>Tabella anagrafica</caption>
+        <thead>
+            <tr><th>Nome</th><th>Cognome</th><th>Email</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Mario</td><td>Rossi</td><td>Mari@rosi.com</td></tr>
+            <tr><td>Aldo</td><td>Bianchi</td><td>aldo@bvvianchi.com</td></tr>
+            <tr><td>Giovanna</td><td>Verdi</td><td>g@verdi.com</td></tr>
+        </tbody>
+        <tfoot>
+            <tr><td colspan="3">Totale utenti: 3</td></tr>
+        </tfoot>
+    </table>
+
+    <h2>Tabella grafica</h2>
+    <table>
+        <tbody>
+            <tr><td rowspan="3">Mario</td><td>Rossi</td><td>Mari@rosi.com</td></tr>
+            <tr><td colspan="5">Aldo</td><td>Bianchi</td><td>aldo@bvvianchi.com</td></tr>
+            <tr><td>Giovanna</td><td>Verdi</td rowspan="2"><td>g@verdi.com</td></tr>
+        </tbody>
+    </table>
+    
+    
+</body>
+</html>
