@@ -54,3 +54,50 @@ vh -> si basa sull' altezza del viewport
 .fratelli ~ h5 {
     text-decoration: underline;
 }
+
+a:link, a:visited {
+    text-decoration: none;
+    color: navy;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: red;
+    font-weight: bold;
+}
+
+.child,.alternato {
+    border-collapse: collapse;
+    width: 500px;
+}
+
+.child th, .child td {
+    border:1px solid black
+}
+
+.child th {
+    background-color: gray;
+}
+
+.child tfoot tr {
+    background-color: cyan;
+}
+
+.child tbody tr:first-child, .child tbody tr:last-child {
+    background-color: yellow;
+}
+
+/* even = righe pari - odd = righe dispari */
+.alternato tr:nth-child(odd) {
+    background-color: blue;
+    color: white;
+}
+
+.list li::before {
+    content:"Studente : "
+}
+
+.list li::after {
+    font-weight: bold;
+    content:" - corso epicode fs0624"
+}
