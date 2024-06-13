@@ -1,0 +1,44 @@
+/* Prof reset setup */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    line-height: 1.2rem;
+    font-size: 1.1rem;
+}
+
+body {
+    background-image: url(../img/mondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    margin: 20px auto;
+    width: 75%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    height: 200px;
+    overflow: auto;
+}
+
+ul li{
+    display:inline-block;
+    margin: 20px 3%;
+}
+
+nav {
+    width: 50%;
+    margin:0 auto;
+    padding: 20px
+}
+
+ul li a:link, ul li a:visited{
+    text-decoration: none;
+    color: crimson;
+}
+
+ul li a:hover {
+    color: darkgreen;
+    text-decoration: underline
+}
