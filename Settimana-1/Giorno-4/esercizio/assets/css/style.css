@@ -188,6 +188,12 @@ th {
     border:1px solid #6685CB
 }
 
+tbody tr:nth-child(even){
+    background-color: #f8f8f8;
+    border-top:0.5px solid #E4E4E4;
+    border-bottom:0.5px solid #E4E4E4;
+}
+
 tr{
     height: 80px;
 }
