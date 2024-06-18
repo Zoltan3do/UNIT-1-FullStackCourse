@@ -7,7 +7,7 @@ const numbers = [1, 2];
 if (numbers[0] > numbers[1])
   console.log(numbers[0] + " è più grande di " + numbers[1]);
 else if (numbers[1] > numbers[0])
-  console.log(numbers[0] + " è più grande di " + numbers[0]);
+  console.log(numbers[1] + " è più grande di " + numbers[0]);
 else
   console.log("I due numeri sono uguali");
 
