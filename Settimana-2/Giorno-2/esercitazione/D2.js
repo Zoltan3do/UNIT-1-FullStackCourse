@@ -72,10 +72,7 @@ console.log("Il prezzo totale durante il black friday è : " + totalPrice);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let a, b, c;
-a = 1;
-b = 2;
-c = 3;
+let a = 1, b = 2, c = 3;
 
 if (a >= b && a >= c)
   if (b >= c)
