@@ -96,7 +96,7 @@ else
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-if (typeof num === "number")
+if ((typeof num).toLowerCase() === "number")
   console.log("La variabile 'num' è numerica!");
 
 /* ESERCIZIO 9
