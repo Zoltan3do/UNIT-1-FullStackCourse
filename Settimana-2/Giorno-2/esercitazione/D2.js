@@ -50,7 +50,8 @@ else
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let totalShoppingCart = 30.50;
-let totalPrice = totalShoppingCart > 50 ? totalShoppingCart : totalShoppingCart + (totalShoppingCart * 0.1);
+let delivery = 0.1;
+let totalPrice = totalShoppingCart > 50 ? totalShoppingCart : totalShoppingCart + (totalShoppingCart * delivery);
 console.log("Ammontare totale per il checkout : " + totalPrice + " euro");
 
 /* ESERCIZIO 6
@@ -59,7 +60,8 @@ console.log("Ammontare totale per il checkout : " + totalPrice + " euro");
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-totalPrice += totalPrice * 0.2;
+let bf = 0.2;
+totalPrice += totalPrice * bf;
 console.log("Il prezzo totale durante il black friday è : " + totalPrice);
 
 /* ESERCIZIO 7
