@@ -50,7 +50,7 @@ else
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let totalShoppingCart = 30.50;
-let totalPrice = totalShoppingCart > 50 ? totalShoppingCart : totalShoppingCart + (totalShoppingCart * 0.10);
+let totalPrice = totalShoppingCart > 50 ? totalShoppingCart : totalShoppingCart + (totalShoppingCart * 0.1);
 console.log("Ammontare totale per il checkout : " + totalPrice + " euro");
 
 /* ESERCIZIO 6
