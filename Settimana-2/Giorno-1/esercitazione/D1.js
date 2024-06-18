@@ -16,6 +16,8 @@ REGOLE
   String, variabili testuali
   Number, variabili numeriche
   Boolean, variabile che puo essere solo o vera o falsa
+  undefined, variabile non definita o senza valore
+  null, variabile valorizzata con un valore nullo
 */
 
 
