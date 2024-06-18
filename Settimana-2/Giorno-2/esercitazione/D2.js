@@ -97,7 +97,7 @@ else
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 if (typeof num === "number")
-  console.log("La variabile è numerica!");
+  console.log("La variabile 'num' è numerica!");
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
