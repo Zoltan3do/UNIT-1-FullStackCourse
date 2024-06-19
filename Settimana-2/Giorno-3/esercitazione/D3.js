@@ -230,12 +230,13 @@ for (let i = 0; i < charactersNames.length; i++) {
 }
 charactersNames = newNamesArr;
 
+console.log("dimensione array nomi dopo : " + charactersNames.length);
+
+
 // for (let i = 0; i < charactersNames.length; i++)
 //   for (let j = 0; j < femaleCharacters.length; j++)
 //     if (charactersNames[i] === femaleCharacters[j].name)
 //       charactersNames.splice(i, 1);
-
-console.log("dimensione array nomi dopo : " + charactersNames.length);
 
 
 /* --EXTRA-- ESERCIZIO 10
