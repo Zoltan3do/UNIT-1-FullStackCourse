@@ -241,7 +241,7 @@ let n = Math.floor(random * ((starWarsCharacters.length - 1)));
 console.log(n);
 stampa = "Nome: " + starWarsCharacters[n].name +
   "\nAltezza: " + starWarsCharacters[n].height +
-  "\nMassa: " + starWarsCharacters[n].massa +
+  "\nMassa: " + starWarsCharacters[n].mass +
   "\nColore di capelli: " + starWarsCharacters[n].hair_color +
   "\nColore della pelle: " + starWarsCharacters[n].skin_color +
   "\nColore degli occhi: " + starWarsCharacters[n].eye_color +
