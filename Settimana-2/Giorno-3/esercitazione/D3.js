@@ -104,7 +104,7 @@ const starWarsCharacters = [
 /* ESERCIZIO 1
   Crea una variabile chiamata "charactersNames" e assegnale un array vuoto
 */
-const charactersNames = [];
+let charactersNames = [];
 
 
 /* ESERCIZIO 2
@@ -134,7 +134,7 @@ let eyeColor = {
   yellow: [],
   brown: [],
   red: [],
-  blue_gray: []
+  "blue-gray": []
 }
 
 
@@ -152,7 +152,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
       break;
     case "red": eyeColor.red.push(starWarsCharacters[i]);
       break;
-    case "blue-gray": eyeColor.blue_gray.push(starWarsCharacters[i]);
+    case "blue-gray": eyeColor.blue-gray.push(starWarsCharacters[i]);
       break;
     default: console.log("Questo colore non puo essere smistato!")
   }
@@ -215,12 +215,27 @@ console.log(newArr);
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
-console.log(charactersNames.length);
-for (let i = 0; i < charactersNames.length; i++)
-  for (let j = 0; j < femaleCharacters.length; j++)
-    if (charactersNames[i] === femaleCharacters[j].name)
-      charactersNames.splice(i, 1);
-console.log(charactersNames.length);
+console.log("dimensione array nomi prima : " + charactersNames.length);
+let newNamesArr = [];
+for (let i = 0; i < charactersNames.length; i++) {
+  let woman = false;
+  for (let j = 0; j < femaleCharacters.length; j++) {
+    if (charactersNames[i] === femaleCharacters[j].name) {
+      woman = true;
+    }
+
+  }
+  if (!woman)
+    newNamesArr.push(charactersNames[i]);
+}
+charactersNames = newNamesArr;
+
+// for (let i = 0; i < charactersNames.length; i++)
+//   for (let j = 0; j < femaleCharacters.length; j++)
+//     if (charactersNames[i] === femaleCharacters[j].name)
+//       charactersNames.splice(i, 1);
+
+console.log("dimensione array nomi dopo : " + charactersNames.length);
 
 
 /* --EXTRA-- ESERCIZIO 10
