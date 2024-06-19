@@ -152,11 +152,13 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
       break;
     case "red": eyeColor.red.push(starWarsCharacters[i]);
       break;
-    case "blue-gray": eyeColor.blue-gray.push(starWarsCharacters[i]);
+    case "blue-gray": eyeColor["blue-gray"].push(starWarsCharacters[i]);
       break;
     default: console.log("Questo colore non puo essere smistato!")
   }
-}
+};
+
+console.log(eyeColor["blue-gray"]);
 
 
 /* ESERCIZIO 6
