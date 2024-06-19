@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ciclare array</title>
+    <style>
+        li::before {
+            content:"Studente: "
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>Studenti</h2>
+    
+    <ul id="studenti">
+    </ul>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Eta</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="usersList">
+        </tbody>
+        <tfoot>
+            <tr >
+                <td colspan="4" id="usersTotal">Totale utenti: &nbsp;</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="cicli.js"></script>
+</body>
+</html>
