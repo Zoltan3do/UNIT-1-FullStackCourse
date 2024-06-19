@@ -157,7 +157,6 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
     default: console.log("Questo colore non puo essere smistato!")
   }
 };
-
 console.log(eyeColor["blue-gray"]);
 
 
@@ -225,7 +224,6 @@ for (let i = 0; i < charactersNames.length; i++) {
     if (charactersNames[i] === femaleCharacters[j].name) {
       woman = true;
     }
-
   }
   if (!woman)
     newNamesArr.push(charactersNames[i]);
