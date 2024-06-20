@@ -47,3 +47,50 @@ function printError() {
 function clearForm() {
     v.value.innerText = "";
 }
+
+
+// VERIFICA CODICE FISCALE
+
+let codFis = "DLGDRA67R20F839V";
+let birthDay = "20";
+let birthYear = "1967";
+let gender = "M";
+let fiscalYear;
+let fiscalDay;
+
+checkPositions();
+extractFiscalCode();
+checkFiscalCode();
+
+function checkPositions() {
+    if (gender === "F") {
+        birthDay = birthDay + 40;
+    }
+    const dayPosition = codFis.indexOf(birthDay, 7);
+    if (dayPosition === -1) {
+        console.log("Il giorno non corrisponde");
+        return;
+    }
+    const yearPosition = codFis.indexOf(birthYear.substring(birthYear, 2), 5);
+    if (yearPosition === -1) {
+        console.log("L'anno non corrisponde");
+        return;
+    }
+}
+
+function extractFiscalCode() {
+    fiscalYear = birthYear.substring(2);
+    fiscalDay = codFis.substring(9, 11);
+}
+
+function checkFiscalCode() {
+    if (fiscalDay === birthDay && birthYear.substring(2) === fiscalYear) {
+        console.log("Il codice fiscale è corretto")
+    }
+    else {
+        console.log("codice fiscale errato")
+    }
+}
+
+
+
