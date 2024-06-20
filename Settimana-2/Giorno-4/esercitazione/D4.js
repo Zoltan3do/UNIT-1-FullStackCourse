@@ -33,7 +33,7 @@ function crazyDiff(x, y = 19) {
     if (x > y)
         return (x - y) + " " + (x - y) * 3;
     else
-        return (x - y) * -1 === -0 ? 0 : (x - y) * -1;
+        return (x - y) * - 1 === -0 ? 0 : (x - y) * -1;
 }
 console.log(crazyDiff(19));
 
