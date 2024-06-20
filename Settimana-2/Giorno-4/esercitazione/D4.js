@@ -31,7 +31,7 @@ console.log(crazySum(3, 3));
 /* SCRIVI QUI LA TUA RISPOSTA */
 function crazyDiff(x, y = 19) {
     if (x > y)
-        return (x - y) * 3;
+        return (x - y) + " " + (x - y) * 3;
     else
         return (x - y) * -1 === -0 ? 0 : (x - y) * -1;
 }
