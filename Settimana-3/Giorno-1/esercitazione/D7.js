@@ -12,11 +12,12 @@ console.log(concatenazioneStringhe("Ciao", "aiuto bho"));
 console.log("************ESERCIZIO 2*************");
 function randomArray() {
   let arr = [];
-  for (let i = 0; i < 10; i++)
-    if (arr.includes(num = Math.floor(Math.random() * (100 + 1))))
-      i--;
-    else
+  for (let i = 0; i < 10;) {
+    if (!arr.includes(num = Math.floor(Math.random() * (100 + 1)))) {
       arr.push(num);
+      i++;
+    }
+  }
   return arr;
 }
 console.log(randomArray());
