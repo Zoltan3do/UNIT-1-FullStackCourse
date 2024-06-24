@@ -265,5 +265,5 @@ function firstYear(arr, y) {
   return arr.findIndex(item => {
     return item.Year === y;
   });
-}
+};
 console.log(firstYear(movies, "2001"));
