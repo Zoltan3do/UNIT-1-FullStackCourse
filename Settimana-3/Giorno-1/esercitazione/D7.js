@@ -253,9 +253,7 @@ console.log(sommaAnni);
 */
 console.log("************ESERCIZIO 14*************");
 function imdb(arr, imdbid) {
-  return arr.find((item) => {
-    return item.imdbID === imdbid;
-  });
+  return arr.find((item) => item.imdbID === imdbid);
 }
 console.log(imdb(movies, "tt4154796"));
 
