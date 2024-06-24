@@ -243,9 +243,7 @@ console.log(filmMillennials);
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 console.log("************ESERCIZIO 13*************");
-let sommaAnni = movies.reduce((sum, item) => {
-  return sum += parseInt(item.Year);
-}, 0);
+let sommaAnni = movies.reduce((sum, item) => sum += parseInt(item.Year), 0);
 console.log(sommaAnni);
 
 /* ESERCIZIO 14 (find)
@@ -262,8 +260,6 @@ console.log(imdb(movies, "tt4154796"));
 */
 console.log("************ESERCIZIO 15*************");
 function firstYear(arr, y) {
-  return arr.findIndex(item => {
-    return item.Year === y;
-  });
+  return arr.findIndex(item => item.Year === y);
 };
 console.log(firstYear(movies, "2001"));
