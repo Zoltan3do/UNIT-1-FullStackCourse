@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversing & DOM Manipulation</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 30%;
+
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: gray;
+        }
+
+        thead tr {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM Traversing & DOM Manipulation</h1>
+
+    <ul id="list">
+        <li>Primo elemento</li>
+        <li>Secondo elemento</li>
+        <li>Terzo elemento</li>
+        <li>Quarto elemento</li>
+        <li>Quinto elemento</li>
+        <li>Sesto elemento</li>
+    </ul>
+
+    <hr />
+
+    <h2>Elenco utenti</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>NOME</th>
+                <th>COGNOME</th>
+                <th>EMAIL</th>
+            </tr>
+        </thead>
+        <tbody id="users">
+        </tbody>
+    </table>
+
+    <hr />
+    <h2>Carrello</h2>
+    <h4 id="realPrice"></h4>
+    <h4 id="majorPrice"></h4>
+    <h4 id="totalPrice"></h4>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
