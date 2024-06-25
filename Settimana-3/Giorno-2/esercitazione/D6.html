@@ -181,27 +181,138 @@
      Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
      La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
   */
-    const generateTable = function () {
+    const tableContainer = document.getElementById("tableArea");
+    const elementi = [
+      {
+        immagine: "immagine1",
+        nome: "prima immagine",
+        prodotto: "primo prodotto",
+        quantita: 1,
+        prezzo: 10
+      },
+      {
+        immagine: "immagine2",
+        nome: "seconda immagine",
+        prodotto: "secondo prodotto",
+        quantita: 2,
+        prezzo: 20
+      },
+      {
+        immagine: "immagine3",
+        nome: "terza immagine",
+        prodotto: "terzo prodotto",
+        quantita: 3,
+        prezzo: 30
+      },
+      {
+        immagine: "immagine4",
+        nome: "quarta immagine",
+        prodotto: "quarto prodotto",
+        quantita: 4,
+        prezzo: 40
+      },
+      {
+        immagine: "immagine5",
+        nome: "quinta immagine",
+        prodotto: "quinta prodotto",
+        quantita: 5,
+        prezzo: 50
+      }
+    ]
 
+    const generateTable = function () {
+      let tabella = document.createElement("table");
+      let testaTabella = document.createElement("thead");
+      let headRow = document.createElement("tr");
+      let immagine = document.createElement("th");
+      let nome = document.createElement("th");
+      let prodotto = document.createElement("th");
+      let quantita = document.createElement("th");
+      let prezzo = document.createElement("th");
+      let corpoTabella = document.createElement("tbody");
+      immagine.textContent = "IMMAGINE";
+      nome.textContent = "NOME";
+      prodotto.textContent = "PRODOTTO";
+      quantita.textContent = "QUANTITA";
+      prezzo.textContent = "PREZZO";
+      tableContainer.appendChild(tabella);
+      tabella.appendChild(testaTabella);
+      tabella.appendChild(corpoTabella);
+      testaTabella.appendChild(headRow);
+      headRow.appendChild(immagine);
+      headRow.appendChild(nome);
+      headRow.appendChild(prodotto);
+      headRow.appendChild(quantita);
+      headRow.appendChild(prezzo);
+
+      elementi.forEach(item => {
+        let cellaImmagine = document.createElement("td");
+        let cellaNome = document.createElement("td");
+        let cellaProdotto = document.createElement("td");
+        let cellaQuantita = document.createElement("td");
+        let cellaPrezzo = document.createElement("td");
+        cellaImmagine.textContent = item.immagine;
+        cellaNome.textContent = item.nome;
+        cellaProdotto.textContent = item.prodotto;
+        cellaQuantita.textContent = item.quantita;
+        cellaPrezzo.textContent = item.prezzo;
+        let trBody = document.createElement("tr");
+        trBody.appendChild(cellaImmagine);
+        trBody.appendChild(cellaNome);
+        trBody.appendChild(cellaProdotto);
+        trBody.appendChild(cellaQuantita);
+        trBody.appendChild(cellaPrezzo);
+        corpoTabella.appendChild(trBody);
+      });
     }
+    generateTable();
 
     /* ESERCIZIO 12
      Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
   */
-
-    const addRow = function () { }
+    const addRow = function (...values) {
+      let row = document.createElement("tr");
+      const corpoTabella = document.querySelector("tbody");
+      for (let i = 0; i < values.length; i++) {
+        let val = document.createElement("td");
+        val.textContent = values[i];
+        row.appendChild(val);
+        corpoTabella.appendChild(row);
+      }
+    }
+    addRow("immagine6", "sesta immagine", "sesto prodotto", 6, 60);
 
     /* ESERCIZIO 14
-    Crea una funzione che nasconda le immagini della tabella quando eseguita
+    Crea una funzione che nasconda le immagini della tabella quando eseguita.
   */
-
-    const hideAllImages = function () { }
+    const righe = document.querySelectorAll("tbody tr");
+    const hideAllImages = function () {
+      righe.forEach(item => {
+        item.firstChild.style.visibility = "hidden";
+      });
+    }
+    hideAllImages();
 
     /* EXTRA ESERCIZIO 15
     Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
   */
+    const esa = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+    const cambiaIlSuoColore = document.getElementById("changeMyColor");
+    const changeColorWithRandom = function () {
+      cambiaIlSuoColore.addEventListener("click", function () {
+        let randomColor = "#";
+        for (let i = 0; i < 6; i++) {
+          randomNumber = Math.floor(Math.random() * esa.length + 1);
+          if (esa[randomNumber] !== undefined)
+            randomColor += esa[randomNumber];
+          else
+            i--;
+        }
+        cambiaIlSuoColore.style.color = randomColor;
+      });
+    }
+    changeColorWithRandom();
 
-    const changeColorWithRandom = function () { }
   </script>
 </body>
 
