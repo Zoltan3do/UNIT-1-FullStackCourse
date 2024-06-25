@@ -239,8 +239,9 @@
       quantita.textContent = "QUANTITA";
       prezzo.textContent = "PREZZO";
 
-      
+      tableContainer.appendChild(tabella);
       tabella.appendChild(testaTabella);
+      tabella.appendChild(corpoTabella);
       testaTabella.appendChild(headRow);
       headRow.appendChild(immagine);
       headRow.appendChild(nome);
@@ -267,10 +268,8 @@
         trBody.appendChild(cellaQuantita);
         trBody.appendChild(cellaPrezzo);
         cellaImmagine.appendChild(immagine);
+        corpoTabella.appendChild(trBody);
       });
-      corpoTabella.appendChild(trBody);
-      tabella.appendChild(corpoTabella);
-      tableContainer.appendChild(tabella);
     }
     generateTable();
 
