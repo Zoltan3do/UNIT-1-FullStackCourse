@@ -276,10 +276,20 @@
       let row = document.createElement("tr");
       const corpoTabella = document.querySelector("tbody");
       for (let i = 0; i < values.length; i++) {
-        let val = document.createElement("td");
-        val.textContent = values[i];
-        row.appendChild(val);
-        corpoTabella.appendChild(row);
+        if (i !== 0) {
+          let val = document.createElement("td");
+          val.textContent = values[i];
+          row.appendChild(val);
+          corpoTabella.appendChild(row);
+        } else {
+          let val = document.createElement("td");
+          let img = document.createElement("img");
+          val.appendChild(img);
+          val.firstChild.setAttribute("href", values[i]);
+          row.appendChild(val);
+          corpoTabella.appendChild(row);
+        }
+
       }
     }
     addRow("immagine6", "sesta immagine", "sesto prodotto", 6, 60);
@@ -287,13 +297,13 @@
     /* ESERCIZIO 14
     Crea una funzione che nasconda le immagini della tabella quando eseguita.
   */
-    const righe = document.querySelectorAll("tbody tr");
-    const hideAllImages = function () {
-      righe.forEach(item => {
-        item.firstChild.style.visibility = "hidden";
-      });
-    }
-    hideAllImages();
+    // const righe = document.querySelectorAll("tbody tr");
+    // const hideAllImages = function () {
+    //   righe.forEach(item => {
+    //     item.firstChild.style.visibility = "hidden";
+    //   });
+    // }
+    // hideAllImages();
 
     /* EXTRA ESERCIZIO 15
     Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
