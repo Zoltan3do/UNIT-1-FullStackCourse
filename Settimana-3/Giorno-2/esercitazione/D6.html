@@ -223,21 +223,24 @@
     const generateTable = function () {
       let tabella = document.createElement("table");
       let testaTabella = document.createElement("thead");
+      let corpoTabella = document.createElement("tbody");
+
       let headRow = document.createElement("tr");
       let immagine = document.createElement("th");
       let nome = document.createElement("th");
       let prodotto = document.createElement("th");
       let quantita = document.createElement("th");
       let prezzo = document.createElement("th");
-      let corpoTabella = document.createElement("tbody");
+     
+
       immagine.textContent = "IMMAGINE";
       nome.textContent = "NOME";
       prodotto.textContent = "PRODOTTO";
       quantita.textContent = "QUANTITA";
       prezzo.textContent = "PREZZO";
-      tableContainer.appendChild(tabella);
+
+      
       tabella.appendChild(testaTabella);
-      tabella.appendChild(corpoTabella);
       testaTabella.appendChild(headRow);
       headRow.appendChild(immagine);
       headRow.appendChild(nome);
@@ -252,7 +255,7 @@
         let cellaQuantita = document.createElement("td");
         let cellaPrezzo = document.createElement("td");
         let immagine = document.createElement("img");
-        immagine.setAttribute("href", item.immagine);
+        immagine.setAttribute("src", item.immagine);
         cellaNome.textContent = item.nome;
         cellaProdotto.textContent = item.prodotto;
         cellaQuantita.textContent = item.quantita;
@@ -264,8 +267,10 @@
         trBody.appendChild(cellaQuantita);
         trBody.appendChild(cellaPrezzo);
         cellaImmagine.appendChild(immagine);
-        corpoTabella.appendChild(trBody);
       });
+      corpoTabella.appendChild(trBody);
+      tabella.appendChild(corpoTabella);
+      tableContainer.appendChild(tabella);
     }
     generateTable();
 
@@ -285,7 +290,7 @@
           let val = document.createElement("td");
           let img = document.createElement("img");
           val.appendChild(img);
-          val.firstChild.setAttribute("href", values[i]);
+          val.firstChild.setAttribute("src", values[i]);
           row.appendChild(val);
           corpoTabella.appendChild(row);
         }
