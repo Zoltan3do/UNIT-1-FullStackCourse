@@ -251,7 +251,8 @@
         let cellaProdotto = document.createElement("td");
         let cellaQuantita = document.createElement("td");
         let cellaPrezzo = document.createElement("td");
-        cellaImmagine.textContent = item.immagine;
+        let immagine = document.createElement("img");
+        immagine.setAttribute("href", item.immagine);
         cellaNome.textContent = item.nome;
         cellaProdotto.textContent = item.prodotto;
         cellaQuantita.textContent = item.quantita;
@@ -262,6 +263,7 @@
         trBody.appendChild(cellaProdotto);
         trBody.appendChild(cellaQuantita);
         trBody.appendChild(cellaPrezzo);
+        cellaImmagine.appendChild(immagine);
         corpoTabella.appendChild(trBody);
       });
     }
