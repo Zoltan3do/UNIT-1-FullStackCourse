@@ -194,6 +194,7 @@ function popolateArray() {
 };
 
 function printList() {
+    lista.innerText = "";
     for (let i = 0; i < listItems.length; i++) {
         let newLi = document.createElement("li");
         newLi.innerText = listItems[i];
