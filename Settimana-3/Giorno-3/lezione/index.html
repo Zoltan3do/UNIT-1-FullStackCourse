@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Form</h1>
+
+    <form id="form">
+        <fieldset>
+            <legend>Registrazione</legend>
+            <label for="regName">Nome</label>
+            <input type="text" id="regName" name="regName">
+            <label for="regSurname">Cognome</label>
+            <input type="text" id="regSurname" name="regSurname" class="required" required>
+            <br />
+            <label for="regEmail">Email</label>
+            <input type="email" id="regEmail" name="regEmail" class="required" required>
+            <label for="regPassword">Password</label>
+            <input type="password" id="regPassword" name="regPassword" class="required" required minlength="8"
+                maxlength="20"
+                title="Inserire una password tra 8  e 20 caratteri che contenga almeno una lettera minuscola, una lettera maiuscola, un numero e un carattere speciale!" />
+            <br />
+            <label for="regAge">Eta</label>
+            <input type="number" id="regAge" name="regAge" min="18" title="Devi essere maggiorenne per registrarti"
+                class="required" required />
+            <label for="regPhone">Telefono</label>
+            <input type="number" id="regPhone" name="regAge" min="10" />
+            <br />
+            <button type="submit" id="sendForm">Invia</button>
+            <button type="reset" id="resetForm">Cancella</button>
+        </fieldset>
+    </form>
+
+    <div>
+        <h4>N.B. I campi evidenziati sono obbligatori</h4>
+        <h3 id="error"></h3>
+    </div>
+
+    <div id="thnks">
+        <h3>Grazie per esserti registrato, di seguito i dati inseriti</h3>
+        <h4 id="formName">Nome:&nbsp;</h4>
+        <h4 id="formSurname">Cognome:&nbsp;</h4>
+        <h4 id="formAge">Eta:&nbsp;</h4>
+        <h4 id="formEmail">Email:&nbsp;</h4>
+        <h4 id="formPhone">Telefono:&nbsp;</h4>
+        <h4 id="formPassword">Password:&nbsp;</h4>
+    </div>
+
+    <hr />
+
+    <h2>Lista dinamica</h2>
+    <form id="listForm">
+        <label for="insertItem">Inserisci elemento</label>
+        <input type="text" id="insertItem" name="insertItem" />
+        <button type="submit" id="btnInsert">Inserisci</button>
+    </form>
+
+    <ul id="list"></ul>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
