@@ -43,6 +43,8 @@ window.addEventListener("load", init());
 function init() {
     formThanks.style.display = "none";
     btnSubmit.setAttribute("disabled", "true");
+    //let myName = prompt("Scrivi il tuo nome");
+    //document.getElementById("welcome").innerText = `Benvenuto ${myName}`;
 }
 
 // EVENTI
@@ -124,7 +126,9 @@ function verify() {
 btnSubmit.addEventListener("click", function (e) {
     e.preventDefault();
     compileObject();
-    printData();
+    setTimeout(() => {
+        printData();
+    }, 3000);// dopo quanto tempo deve eseguire una funzione 
     myForm.reset();
 });
 
@@ -176,6 +180,9 @@ const lista = document.getElementById("list");
 const listItems = [];
 
 btnList.addEventListener("click", function (e) {
+    let myConfirm = confirm("sei sicuro?");// alert che restituisce un booleano
+    if (!myConfirm) return;
+
     e.preventDefault();
     if (!checkInput()) {
         return;
