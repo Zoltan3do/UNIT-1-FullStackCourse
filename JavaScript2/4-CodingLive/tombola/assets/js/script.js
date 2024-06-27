@@ -13,6 +13,7 @@ let allSortedNumbers = [];
 let allNumbers = [];
 let cartelle = [];
 let cartella = [];
+let conteggio = [];
 
 window.addEventListener("load", init());
 
@@ -36,13 +37,15 @@ sort.addEventListener("click", function () {
         createBoard(allSortedNumbers);
         currentNumber.innerText = "Ultimo numero uscito: " + sortedNumber;
         cartellone[sortedNumber - 1].style.backgroundColor = "red";
-        for (let i = 0; cartelle.length; i++)
-            if (cartelle[i].includes(sortedNumber))
-                cartelle[i][cartelle[i].indexOf(sortedNumber).style.backgroundColor = "red"];
-        formaggio.reset();
-    } else {
+        for (let i = 0; i < cartelle.length; i++)
+            if (cartelle[i].includes(sortedNumber)) {
+                containerCartelle.children[i].children[cartelle[i].indexOf(sortedNumber)].style.backgroundColor = "red";
+                containerCartelle.children[i].children[cartelle[i].indexOf(sortedNumber)].classList.add("checked");
+                checkWinner();
+                formaggio.reset();
+            }
+    } else
         alert("Devi acquistare almeno una cartella per poter giocare!")
-    }
 });
 
 buy.addEventListener("click", function (e) {
@@ -85,4 +88,17 @@ function printBoards() {
         containerCartelle.appendChild(card);
     }
     cartellone = document.querySelectorAll("#container-cartellone div");
+}
+
+function checkWinner() {
+    for (let i = 0; i < cartelle.length; i++) {
+        let x = 0;
+        for (let j = 0; j < cartelle[i].length; j++)
+            if (containerCartelle.children[i].children[j].classList.contains("checked"))
+                x++;
+        if (x == 15) {
+            win.innerText = "Ha vinto la cartella numero: " + (i + 1);
+            sort.setAttribute("disabled", "true");
+        }
+    }
 }
